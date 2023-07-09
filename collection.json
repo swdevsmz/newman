@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "e7b2bd3b-b099-4cff-ae30-cb4f391fb479",
+		"name": "postman-api-sample\\",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18917690"
+	},
+	"item": [
+		{
+			"name": "sample-request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://zip.cgis.biz/csv/zip.php?zn=1030000",
+					"protocol": "http",
+					"host": [
+						"zip",
+						"cgis",
+						"biz"
+					],
+					"path": [
+						"csv",
+						"zip.php"
+					],
+					"query": [
+						{
+							"key": "zn",
+							"value": "1030000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
